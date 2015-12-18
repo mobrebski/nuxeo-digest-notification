@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<xs:schema targetNamespace="http://www.nuxeo.org/ecm/schemas/digestnotification/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nxs="http://www.nuxeo.org/ecm/schemas/digestnotification/"
+  xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/">
+
+
+  <xs:element name="digestnotifications" type="nxs:digestnotifications"/>
+
+  <xs:complexType name="digestnotifications">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="item" type="nxs:digestnotificationEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="digestnotificationEntry">
+    <xs:sequence>
+      <xs:element name="scope" type="xs:string"/>
+      <xs:element name="subscriber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+</xs:schema>

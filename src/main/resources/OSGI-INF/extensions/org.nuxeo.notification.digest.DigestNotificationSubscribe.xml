@@ -1,0 +1,14 @@
+<component name="org.nuxeo.notification.digest.DigestNotificationSubscribe">
+
+  <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent"
+    point="operations" >
+      <operation class="org.nuxeo.notification.digest.DigestNotificationSubscribe" />
+   </extension>
+   
+   <extension target="org.nuxeo.ecm.core.schema.TypeService"
+		point="schema">
+		<schema name="digestnotification" prefix="dgnotif"
+			src="data/schemas/digestnotification.xsd" />
+	</extension>
+    
+</component>
